@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Maas Hesaplama Test Suite">
+
+    <test name="Maas Hesaplama Temel Testleri">
+        <classes>
+            <class name="com.mustafasengul.MaasHesaplamaTest"/>
+        </classes>
+    </test>
+
+    <test name="Maas Hesaplama DataProvider Testleri">
+        <classes>
+            <class name="com.mustafasengul.MaasHesaplamaDataProviderTest"/>
+        </classes>
+    </test>
+
+</suite>
