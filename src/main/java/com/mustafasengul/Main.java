@@ -1,29 +1,21 @@
 package com.mustafasengul;
+import com.mustafasengul.Personel;
+import com.mustafasengul.MaasHesaplama;
 
-/**
- * -----------------------------------------------------------------------------
- * CLASS NAME   : ${NAME}
- * AUTHOR       : Mustafa.Sengul
- * CREATED DATE : 12.11.2025
- * DESCRIPTION  : [Kısa açıklama yazılabilir]
- * -----------------------------------------------------------------------------
- * UPDATE LOG   :
- * - [TARİH] : [KULLANICI ADI] - [Yapılan değişiklik açıklaması]
- * -----------------------------------------------------------------------------
- */
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Personel p1 = new Personel("Ahmet", 22);
+        Personel p2 = new Personel("Ayşe", 27);
+        Personel p3 = new Personel("Mehmet", 19);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println(p1.getIsim() + " maaşı: " + MaasHesaplama.hesaplaMaas(p1));
+        System.out.println(p2.getIsim() + " maaşı: " + MaasHesaplama.hesaplaMaas(p2));
+        System.out.println(p3.getIsim() + " maaşı: " + MaasHesaplama.hesaplaMaas(p3));
+
+        // Üçlü operatör ile maaş kategorisi gösterimi
+        System.out.println(p1.getIsim() + " maaş kategorisi: " +
+                MaasHesaplama.maasKategorisi(MaasHesaplama.hesaplaMaas(p1)));
+
+
     }
 }
